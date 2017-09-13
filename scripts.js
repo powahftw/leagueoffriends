@@ -82,9 +82,10 @@ $(document).ready(function() {
             }
         }
         var inputname = $("input[name=task]").val();
+        console.log(inputname)
         
         if (0 < inputname.length &&     // Not null string
-            inputname.lenght < 17 &&    // Too long nicknames
+            inputname.length < 17 &&    // Too long nicknames
             unique &&                   // Not already there
             rx.test(inputname) &&       // Regex provided by Rito
             arr.length < 6              // Not too many people
