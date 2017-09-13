@@ -82,7 +82,6 @@ $(document).ready(function() {
             }
         }
         var inputname = $("input[name=task]").val();
-        console.log(inputname)
         
         if (0 < inputname.length &&     // Not null string
             inputname.length < 17 &&    // Too long nicknames
@@ -91,7 +90,7 @@ $(document).ready(function() {
             arr.length < 6              // Not too many people
             ) { // Add elements to the array if the textbox is not empty, arr < 6 element unique
             var newEntry = {
-                number: $('#dropbown').find(":selected").text(),
+                number: $('#dropbown').find(":selected").val(),
                 name: inputname.replace(" ", "").toLowerCase(),
                 status: "notingame"
             }
