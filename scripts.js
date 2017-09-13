@@ -73,7 +73,7 @@ $(document).ready(function() {
     
     setInterval(function() {
         updatevalue(arr)
-    }, 15000);
+    }, 8000 + 3000 * arr.length );
 
     $('button').click(function() {
         var unique = 1;
