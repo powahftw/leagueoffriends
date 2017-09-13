@@ -17,11 +17,9 @@ function apicall(callurl, arr, idx) {
                     setarray("notingame", arr, idx);
                 }
             } else if (data.response['success'] == true && data.response['in_game'] == true) {
-                console.log("SCRIPT");
                 console.log(data.response['time']);
                 setarray(data.response['time'], arr, idx);
             } else {
-                console.log("FUCKFOREVER");
                 setarray("notingame", arr, idx);
             }
         }
@@ -109,9 +107,9 @@ $(document).ready(function() {
 
     $("body").on('click', '#todo a', function() {
         var string = $(this).closest("ul").text();
+        
         string = string.split(' ');
-        console.log(string);
-
+        
         var todelete = -1
 
         for (var i in arr) { // Find index of the element to remove
@@ -130,9 +128,9 @@ $(document).ready(function() {
 
 function notifyMe(arr, idx) {
   var options = {
-    body: "Hey there!" + arr[idx] + "has finished a game",
+    body: "Hey there!" + arr[idx].name + "has finished a game",
     icon: "http://i.imgur.com/xNLs83T.png"
   }
   var n = new Notification("EndGame", options);
-  setTimeout(n.close.bind(n), 4000);
+  setTimeout(n.close.bind(n), 8500);
 }
