@@ -87,7 +87,7 @@ $(document).ready(function() {
             inputname.lenght < 17 &&    // Too long nicknames
             unique &&                   // Not already there
             rx.test(inputname) &&       // Regex provided by Rito
-            arr.length < 6 &&           // Not too many people
+            arr.length < 6              // Not too many people
             ) { // Add elements to the array if the textbox is not empty, arr < 6 element unique
             var newEntry = {
                 number: $('#dropbown').find(":selected").text(),
