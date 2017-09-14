@@ -12,6 +12,7 @@ function apicall(callurl, arr, idx) {
                 console.log(arr[idx].status)
                 if (arr[idx].status != "notingame") {
                     notifyMe(arr, idx);
+                    arr[idx].toupdate = false;
                     setarray("endgame", arr, idx);
                 } else {
                     setarray("notingame", arr, idx);
@@ -34,10 +35,12 @@ function setarray(arg, arr, idx) {
 function updatevalue(arr) {
     if (arr != undefined && arr.length > 0) {
         for (var i in arr) {
-            var callurl = "https://apirestflask.herokuapp.com/" + arr[i].number.toLowerCase() + "/" + arr[i].name;
-            console.log(callurl);
-            apicall(callurl, arr, i);
-        }
+            if (arr[i].toupdate) {
+                var callurl = "https://apirestflask.herokuapp.com/" + arr[i].number.toLowerCase() + "/" + arr[i].name;
+                console.log(callurl);
+                apicall(callurl, arr, i);
+                }
+            }
         genUI(arr);
     }
 }
@@ -98,7 +101,8 @@ $(document).ready(function() {
             var newEntry = {
                 number: $('#dropbown').find(":selected").val(),
                 name: inputname.replace(" ", "").toLowerCase(),
-                status: "notingame"
+                status: "notingame",
+                toupdate: true,
             }
             arr.push(newEntry);
             genUI(arr); // Update GUI
