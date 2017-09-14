@@ -9,7 +9,6 @@ function apicall(callurl, arr, idx) {
             if (data.response['success'] == false) {
                 setarray("errorinid", arr, idx);
             } else if (data.response['success'] == true && data.response['in_game'] == false) {
-                console.log(arr[idx].status)
                 if (arr[idx].status != "notingame") {
                     notifyMe(arr, idx);
                     arr[idx].toupdate = false;
@@ -133,8 +132,8 @@ $(document).ready(function() {
 function notifyMe(arr, idx) {
   var options = {
     body: "Hey there!" + arr[idx].name + "has finished a game",
-    icon: "http://i.imgur.com/xNLs83T.png"
+    icon: "https://i.imgur.com/xNLs83T.png"
   }
   var n = new Notification("EndGame", options);
-  setTimeout(n.close.bind(n), 8500);
+  setTimeout(n.close.bind(n), 12500);
 }
