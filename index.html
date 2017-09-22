@@ -8,15 +8,29 @@
   
   <title>League of Friends-Track</title>
   
-  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
+  <script  src="https://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<script>
+  try {
+      $ = jQuery = module.exports;
+      // If you want module.exports to be empty, uncomment:
+      // module.exports = {};
+  } catch(e) {}
+</script>  
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
+<script src="scripts.js"></script>     
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="main.css"> 
+  
 </head>
 
 <body>
     <div class="form-group">
-        <h1>League <small>of</small> Friends</h1>
-        <form role="form" >
-        <div class="row">
+        <div class="row leagued"><ul class="col-12 none"></ul><h1 class="centered">League <small>of</small> Friends</h1></div>
+        <form role="form" class="stretched" >
+        <div class="row stretched">
+        	<ul class="col-12"></ul>
+        <br>
             <div class="col-4">
                 <select id="dropbown" class="form-control" placeholder="Server" name="task">
                     <option value="euw1">EUW</option>
@@ -27,11 +41,11 @@
                     <option value="oc1">OCE</option>
                 </select>
             </div>
-            <div class="col-8">    
+            <div class="col-8 right">    
                 <div class="input-group">
                 <input type="text" class="form-control" placeholder="Friends Nickname" name="task">
-                <span class="input-group-btn">
-                    <button class="btn btn-secondary clickable" onclick = "void(0)" type="button">Add!</button>
+                <span class="input-group-btn clickable">
+                    <button class="btn btn-secondary" onclick = "void(0)" type="button">Add!</button>
                 </span>
                 </div>
             </div>
@@ -40,19 +54,6 @@
     </div>
   
     <ul class="col-12" id="todo"></ul>
-</body>
 
-<script  src="https://code.jquery.com/jquery-3.2.1.js"  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-<script>
-  try {
-      $ = jQuery = module.exports;
-      // If you want module.exports to be empty, uncomment:
-      // module.exports = {};
-  } catch(e) {}
-</script>  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">    
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="main.css">  
-<script src="scripts.js"></script>     
-  
+</body>
 </html>
