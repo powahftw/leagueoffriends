@@ -3,7 +3,7 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 body {
-    background: linear-gradient(141deg, #A239ca 0%, #4717f6 100%);
+    background: linear-gradient(141deg, #22A7F0 0%, #3498DB 100%);
     height: 100%;
     background-repeat: no-repeat;
     background-attachment:fixed;
@@ -12,6 +12,17 @@ body {
 form {
     margin-top: 15px;
     display: inline-block;
+}
+
+footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    font-size: 80%;
+    color: #0E0B16;
+    text-align: center;
 }
 .form-group {
     padding-top: 10%;
@@ -22,7 +33,7 @@ form {
     border-radius: 0px;
     box-shadow: 4px 4px 0px -1px #0E0B16;
     border-color:#0E0B16;
-}
+}   
 #dropbown {
     border-radius: 0px;
     box-shadow: 4px 4px 0px -1px #0E0B16;
@@ -51,7 +62,7 @@ a.close {
 }
 
 .custombox {
-    background-color: #0074D9;
+    background: linear-gradient(141deg, #ffad00 0%, #ffeb00 100%);
     padding: 30px;
     margin: 15px;
     box-shadow: 4px 4px 0px -1px #0E0B16;
@@ -65,8 +76,8 @@ a.close {
     color: grey;
     font-weight: 500;
     letter-spacing: 0.10em;
-	color: #4a18f4;
-    background: linear-gradient(141deg, #ffad00 0%, #ffeb00 100%);
+	color: #07182a;
+    background: linear-gradient(141deg, #19B5FE 0%, #19B5FE 100%);
     box-shadow: 4px 4px 0px -1px #0E0B16;
     width: fit-content !important;
 }
@@ -124,7 +135,7 @@ a.close {
 	width:100%;
 	padding: 15px 0px 20px 0px;
 	max-width:540px;
-	color: #4a18f4;
+	color: #2C3E50;
     background: linear-gradient(141deg, #ffad00 0%, #ffeb00 100%);
     box-shadow: 6px 6px 0px #0E0B16;
     text-shadow: 4px 3px 0px #f2a114;
