@@ -1,6 +1,8 @@
 # League of Friends
 
-**WARNING:** The Riot Games API KEY need to be manually updated by me on the proxy server each day. The expiration date is due to Riot policy for non-approved projects. I'm currently in the process to apply for a permanent API KEY. Until than the website will mostly be nonfunctional. You can get an idea on how it work by looking at the screenshots below.
+**UPDATE** I got the project approved, so the service should be functionals most of the times without problems. 
+
+You can get an idea on how it work by looking at the screenshots below.
 
 ## What is this?
 
